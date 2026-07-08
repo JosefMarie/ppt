@@ -937,6 +937,8 @@ h1, h2, h3, h4, h5, h6 {
   body { overflow: auto; }
   :root { --deck-height: auto; }
   #deck-viewport { height: auto; padding: 1rem; }
+  /* Allow the deck viewport to show scrollable slide content on mobile */
+  #deck-viewport { overflow: visible; }
   /* Stack slides vertically and show only the active slide but allow scrolling of its content */
   .slide {
     position: relative;
@@ -961,6 +963,7 @@ h1, h2, h3, h4, h5, h6 {
     max-height: calc(100vh - (var(--header-height) + 80px));
     overflow-y: auto;
     padding-bottom: 1rem;
+    touch-action: pan-y;
   }
   /* Ensure footer and header remain visible and tappable */
   #deck-header, #deck-footer {

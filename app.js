@@ -339,7 +339,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Exit Presenter Mode button (mobile): when clicked, ensure presenter mode is turned off
   if (exitPresenterBtn) {
-    exitPresenterBtn.addEventListener('click', () => {
+    const forceExitPresenter = (e) => {
+      if (e && typeof e.preventDefault === 'function') {
+        e.preventDefault();
+        e.stopPropagation();
+      }
       // Force exit presenter mode (do not rely on toggle state)
       if (appContainer.classList.contains('presenter-layout')) {
         appContainer.classList.remove('presenter-layout');
@@ -350,9 +354,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ensure presenter aside is hidden and viewer updates
         const currentActiveSlide = document.querySelector('.slide.active');
         if (currentActiveSlide) currentActiveSlide.classList.add('active');
-        // Hide any presenter-only UI state
       }
-    });
+    };
+
+    // Listen to pointer events for broad device coverage and fallback to click
+    exitPresenterBtn.addEventListener('pointerdown', forceExitPresenter, { passive: true });
+    exitPresenterBtn.addEventListener('click', forceExitPresenter);
+    // Also handle touchstart for older browsers
+    exitPresenterBtn.addEventListener('touchstart', forceExitPresenter, { passive: true });
   }
 
   if (qrDownloadBtn) {
