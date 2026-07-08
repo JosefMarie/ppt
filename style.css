@@ -889,6 +889,37 @@ h1, h2, h3, h4, h5, h6 {
 .qr-actions { display: flex; gap: 0.5rem; margin-top: 0.75rem; justify-content: center; }
 .qr-note { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center; }
 
+/* Exit Presenter Mode floating button (mobile) */
+.exit-presenter-btn {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .exit-presenter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: fixed;
+    right: 16px;
+    bottom: 88px; /* above footer */
+    z-index: 60;
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    color: var(--text-main);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    font-weight: 600;
+    pointer-events: auto;
+  }
+
+  /* Only show when presenter layout is active */
+  .presenter-layout .exit-presenter-btn {
+    display: flex;
+  }
+}
+
 /* Responsiveness tweaks for small screens */
 @media (max-width: 600px) {
   :root { --deck-width: 360px; --deck-height: 640px; }
@@ -898,6 +929,39 @@ h1, h2, h3, h4, h5, h6 {
   .projects-grid { grid-template-columns: 1fr; }
   .projects-grid .project-card { padding: 1rem; }
   .cta-card { max-width: 100%; padding: 1rem; }
+}
+
+/* Mobile: allow page scrolling and make slides flow vertically so users can scroll content */
+@media (max-width: 900px) {
+  body { overflow: auto; }
+  :root { --deck-height: auto; }
+  #deck-viewport { height: auto; padding: 1rem; }
+  /* Stack slides vertically and show only the active slide but allow scrolling of its content */
+  .slide {
+    position: relative;
+    width: 100%;
+    max-width: var(--deck-width);
+    height: auto;
+    max-height: none;
+    transform: none;
+    opacity: 1;
+    pointer-events: none;
+    display: none;
+    margin-bottom: 1.25rem;
+  }
+  .slide.active {
+    display: block;
+    pointer-events: auto;
+  }
+  /* Ensure footer and header remain visible and tappable */
+  #deck-header, #deck-footer {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 0 0.5rem 0;
+  }
+  #deck-footer { bottom: 0; margin-top: 0.5rem; }
 }
 
 /* ==========================================================================

@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const notesOverlay = document.getElementById('notes-overlay');
   const notesOverlayText = document.getElementById('notes-overlay-text');
   const notesCollapseBtn = document.getElementById('notes-collapse-btn');
+  const exitPresenterBtn = document.getElementById('exit-presenter-btn');
   
   // Presenter DOM Elements
   const presenterTimer = document.getElementById('presenter-timer');
@@ -336,6 +337,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Exit Presenter Mode button (mobile): when clicked, ensure presenter mode is turned off
+  if (exitPresenterBtn) {
+    exitPresenterBtn.addEventListener('click', () => {
+      if (appContainer.classList.contains('presenter-layout')) {
+        togglePresenterMode();
+        // Brief confirmation for the presenter
+        setTimeout(() => {
+          // Optionally focus content or give subtle feedback
+        }, 120);
+      }
+    });
+  }
+
   if (qrDownloadBtn) {
     qrDownloadBtn.addEventListener('click', () => {
       const img = document.getElementById('qr-img');
@@ -424,9 +438,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Start slide 1, display and initialize state values
   goToSlide(1);
   resetPresenterTimer();
-
-  // Presenter split is active by default to showcase layout
-  // We can let presenter view load automatically on load
-  togglePresenterMode();
+  // Presenter split: enable by default only on non-touch large screens
+  // Prevent auto-activating presenter mode on phones/tablets where it blocks interaction
+  const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+  if (!isTouch && window.innerWidth >= 900) {
+    togglePresenterMode();
+  } else {
+    // Ensure viewer layout for touch/smaller viewports
+    appContainer.classList.remove('presenter-layout');
+    appContainer.classList.add('viewer-layout');
+    if (presenterToggleBtn) presenterToggleBtn.classList.remove('active');
+  }
 
 });
