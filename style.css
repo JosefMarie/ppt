@@ -903,7 +903,7 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     right: 16px;
     bottom: 88px; /* above footer */
-    z-index: 60;
+    z-index: 220;
     padding: 0.6rem 0.9rem;
     border-radius: 999px;
     background: rgba(255,255,255,0.06);
@@ -952,6 +952,13 @@ h1, h2, h3, h4, h5, h6 {
   .slide.active {
     display: block;
     pointer-events: auto;
+  }
+  /* Make slide content scrollable so long pages/cards can be scrolled on mobile */
+  .slide.active .slide-content {
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    /* smooth scrolling on iOS handled by browser; avoid deprecated prefixed property */
+    padding-bottom: 1rem;
   }
   /* Ensure footer and header remain visible and tappable */
   #deck-header, #deck-footer {
