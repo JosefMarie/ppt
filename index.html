@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation[EA] | Engineering the Digital Future of East Africa</title>
+  <meta name="description" content="A premium 10-slide interactive pitch deck presentation for Foundation[EA], Kigali's premier digital engineering agency.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cybernetic Ambient Background -->
+  <div class="ambient-bg">
+    <div class="grid-overlay"></div>
+    <div class="glow-orb glow-cyan"></div>
+    <div class="glow-orb glow-purple"></div>
+  </div>
+
+  <!-- App Wrapper: Can toggle state 'presenter-mode' -->
+  <div id="app-container" class="viewer-layout">
+    
+    <!-- MAIN DECK WINDOW (Contains slides & floating HUD controls) -->
+    <main id="deck-viewport">
+      
+      <!-- Top Branding Bar -->
+      <header id="deck-header">
+        <div class="logo">
+          FOUNDATION<span class="text-cyan">[EA]</span>
+        </div>
+        <div class="tagline">Pitch Deck 2026</div>
+      </header>
+
+      <!-- Slides Container -->
+      <div id="slides-container">
+        
+        <!-- Slide 1: Title Slide -->
+        <section class="slide active" data-slide="1">
+          <div class="slide-content title-slide">
+            <div class="cyber-badge">ENGINEERING THE NEXT 2026</div>
+            <h1 class="kinetic-text font-huge">
+              DIGITAL<br>
+              <span class="text-gradient-purple">FOUNDATION</span>
+            </h1>
+            <p class="subtitle">Engineering the Digital Future of East Africa</p>
+            <div class="slide-footer-info">
+              <span>Presenter: Ashimirwe Joseph Marie</span>
+              <span>Kigali, Rwanda</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 2: The Hook -->
+        <section class="slide" data-slide="2">
+          <div class="slide-content">
+            <span class="slide-category">THE "WHY"</span>
+            <h2 class="slide-title">Bridging the Digital Divide</h2>
+            <div class="grid-layout cols-3 gap-lg mt-lg">
+              <div class="glass-card flex-col align-start gap-md hover-glow">
+                <div class="card-icon cyan-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+                <h3>Rapid Growth</h3>
+                <p>The East African digital landscape is expanding at an unprecedented pace.</p>
+              </div>
+              <div class="glass-card flex-col align-start gap-md hover-glow">
+                <div class="card-icon purple-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>Future-Proof</h3>
+                <p>Businesses need premium, enterprise-grade digital infrastructure, not just code.</p>
+              </div>
+              <div class="glass-card flex-col align-start gap-md hover-glow">
+                <div class="card-icon cyan-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+                </div>
+                <h3>Theory to Reality</h3>
+                <p>We actively bridge the gap between classroom theory and industry-grade implementation.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 3: The Problem -->
+        <section class="slide" data-slide="3">
+          <div class="slide-content">
+            <span class="slide-category">THE OPPORTUNITY</span>
+            <h2 class="slide-title text-gradient-purple">The "Analog" Friction</h2>
+            <div class="grid-layout cols-3 gap-lg mt-lg">
+              <div class="glass-card friction-card">
+                <div class="card-num">01</div>
+                <h3>Underdesigned Software</h3>
+                <p>Existing digital solutions lack intuitive UX, aesthetics, and high performance.</p>
+              </div>
+              <div class="glass-card friction-card">
+                <div class="card-num">02</div>
+                <h3>Analog Workflows</h3>
+                <p>Enterprises struggle with slow, inefficient, paper-heavy reporting systems.</p>
+              </div>
+              <div class="glass-card friction-card">
+                <div class="card-num">03</div>
+                <h3>Talent Gap</h3>
+                <p>A deep divide exists between academic software curriculum and industry engineering needs.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 4: Our Solution -->
+        <section class="slide" data-slide="4">
+          <div class="slide-content">
+            <span class="slide-category">OUR APPROACH</span>
+            <h2 class="slide-title">Premium Engineering, Local Impact</h2>
+            <div class="grid-layout cols-2 gap-lg mt-lg">
+              <div class="glass-card flex-col justify-between align-stretch text-left">
+                <div>
+                  <div class="badge-accent cyan-bg">EXPERT STACK</div>
+                  <ul class="tech-list mt-md">
+                    <li><strong class="text-cyan">Frontend:</strong> Next.js 15, TypeScript</li>
+                    <li><strong class="text-cyan">Backend:</strong> Node.js, Python, PostgreSQL, Firebase</li>
+                    <li><strong class="text-cyan">Architectures:</strong> Real-time synchronization & serverless layers</li>
+                  </ul>
+                </div>
+                <div class="tech-icons mt-md">
+                  <span class="tech-pill">NextJS</span>
+                  <span class="tech-pill">TS</span>
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">Postgres</span>
+                </div>
+              </div>
+              <div class="glass-card flex-col justify-between align-stretch text-left border-purple">
+                <div>
+                  <div class="badge-accent purple-bg">SIGNATURE AESTHETIC</div>
+                  <ul class="aesthetic-list mt-md">
+                    <li><strong class="text-purple">Kinetic Typography:</strong> Dynamic text reveals</li>
+                    <li><strong class="text-purple">Glassmorphism:</strong> Deep translucent overlays</li>
+                    <li><strong class="text-purple">Functional Beauty:</strong> Software that is visually stunning yet lightning fast</li>
+                  </ul>
+                </div>
+                <div class="glow-accent-line"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 5: The Dual-Pillar Model -->
+        <section class="slide" data-slide="5">
+          <div class="slide-content">
+            <span class="slide-category">BUSINESS ENGINE</span>
+            <h2 class="slide-title">Engineering & Incubation</h2>
+            <div class="grid-layout cols-2 gap-xl mt-lg">
+              <div class="pillar-box left-pillar">
+                <div class="pillar-header">
+                  <span class="pillar-num">01</span>
+                  <h3>Professional Agency</h3>
+                </div>
+                <p class="pillar-desc">High-end digital engineering and AI development tailored for enterprise clients demanding robust performance and world-class designs.</p>
+                <div class="pillar-badge">Enterprise Focus</div>
+              </div>
+              <div class="pillar-box right-pillar">
+                <div class="pillar-header">
+                  <span class="pillar-num">02</span>
+                  <h3>Talent Incubation</h3>
+                </div>
+                <p class="pillar-desc">Bridging the gap for local developers through intensive mentorship, teaching, and participation in real-world commercial software projects.</p>
+                <div class="pillar-badge">Regional Impact</div>
+              </div>
+            </div>
+            <div class="founder-quote glass px-md py-sm rounded-md border-white-10 max-w-xl mx-auto mt-md">
+              <p class="text-sm italic">"Our dual-pillar structure allows us to maintain a pipeline of top-tier local engineering talent while delivering globally competitive service quality."</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 6: Flagship Work -->
+        <section class="slide" data-slide="6">
+          <div class="slide-content">
+            <span class="slide-category">OUR WORK</span>
+            <h2 class="slide-title">Our Flagship Work</h2>
+            <div class="projects-grid mt-lg">
+              <article class="project-card hover-glow">
+                <div class="project-header">
+                  <div>
+                    <h3>Foundation[EA]</h3>
+                    <p class="project-eyebrow">Digital engineering studio</p>
+                  </div>
+                  <span class="project-status live">Live</span>
+                </div>
+                <div class="project-body">
+                  <p>Premium software experiences for modern African businesses, blending polished design, reliable architecture, and local impact.</p>
+                  <a class="project-link" href="https://foundationea.com" target="_blank" rel="noopener noreferrer">Visit foundationea.com</a>
+                </div>
+                <div class="project-interactive">
+                  <div class="project-preview-pill">Global-standard digital products</div>
+                </div>
+              </article>
+
+              <article class="project-card hover-glow">
+                <div class="project-header">
+                  <div>
+                    <h3>USAFI Barista Training Center</h3>
+                    <p class="project-eyebrow">Coffee & hospitality training</p>
+                  </div>
+                  <span class="project-status live">Live</span>
+                </div>
+                <div class="project-body">
+                  <p>Professional coffee training in brewing, espresso, latte art, specialty drinks, and international certification.</p>
+                  <a class="project-link" href="https://www.usafi-barista.com/" target="_blank" rel="noopener noreferrer">Open platform</a>
+                </div>
+                <div class="project-interactive">
+                  <div class="project-preview-pill">Barista skill pathways</div>
+                </div>
+              </article>
+
+              <article class="project-card hover-glow">
+                <div class="project-header">
+                  <div>
+                    <h3>Divine&#39;s Destinations</h3>
+                    <p class="project-eyebrow">Travel & storytelling</p>
+                  </div>
+                  <span class="project-status dev">Under development</span>
+                </div>
+                <div class="project-body">
+                  <p>Observing the world through a lens of technical precision and poetic silence, turning journeys into immersive digital moments.</p>
+                  <a class="project-link" href="https://divine-destination-3248c.web.app/" target="_blank" rel="noopener noreferrer">View experience</a>
+                </div>
+                <div class="project-interactive">
+                  <div class="project-preview-pill">Cinematic travel UX</div>
+                </div>
+              </article>
+
+              <article class="project-card hover-glow">
+                <div class="project-header">
+                  <div>
+                    <h3>Happy Fish Farm Rwanda Academy</h3>
+                    <p class="project-eyebrow">Aquaculture education</p>
+                  </div>
+                  <span class="project-status dev">Under development</span>
+                </div>
+                <div class="project-body">
+                  <p>Specialized vocational training for sustainable fish farming, water safety, and future-ready aquaculture entrepreneurship.</p>
+                  <a class="project-link" href="https://happy-fish-farm-academy.web.app/" target="_blank" rel="noopener noreferrer">Discover academy</a>
+                </div>
+                <div class="project-interactive">
+                  <div class="project-preview-pill">Sustainable food systems</div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 7: Flagship Work Continued -->
+        <section class="slide" data-slide="7">
+          <div class="slide-content">
+            <span class="slide-category">OUR WORK</span>
+            <h2 class="slide-title">Our Flagship Work <span class="text-accent">(Continued)</span></h2>
+            <div class="projects-grid mt-lg">
+              <article class="project-card hover-glow">
+                <div class="project-header">
+                  <div>
+                    <h3>5A FARMS</h3>
+                    <p class="project-eyebrow">Precision agriculture</p>
+                  </div>
+                  <span class="project-status dev">Under development</span>
+                </div>
+                <div class="project-body">
+                  <p>A greener, more prosperous future through automated precision and modular ecosystems for agricultural resilience.</p>
+                  <a class="project-link" href="https://afs-ltd.web.app/" target="_blank" rel="noopener noreferrer">Explore 5A FARMS</a>
+                </div>
+                <div class="project-interactive">
+                  <div class="project-preview-pill">Resilient food infrastructure</div>
+                </div>
+              </article>
+
+              <article class="project-card hover-glow">
+                <div class="project-header">
+                  <div>
+                    <h3>Portfolio Focus</h3>
+                    <p class="project-eyebrow">Cross-sector digital impact</p>
+                  </div>
+                  <span class="project-status live">Focused</span>
+                </div>
+                <div class="project-body">
+                  <p>Our portfolio spans travel, education, hospitality, and agriculture—each experience designed to solve real local problems elegantly.</p>
+                </div>
+                <div class="project-interactive">
+                  <div class="project-preview-pill">Built for Africa, engineered globally</div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 8: Market Opportunity -->
+        <section class="slide" data-slide="8">
+          <div class="slide-content">
+            <span class="slide-category">THE HORIZON</span>
+            <h2 class="slide-title">The Digital Horizon</h2>
+            <div class="grid-layout cols-3 gap-md mt-lg">
+              <div class="metric-card glass">
+                <div class="metric-val">Kigali</div>
+                <h4>Regional ICT Hub</h4>
+                <p>Positioned in the heart of East Africa's leading technology-first city.</p>
+              </div>
+              <div class="metric-card glass">
+                <div class="metric-val">Sector Demand</div>
+                <h4>High Transformation</h4>
+                <p>Rising pressure to digitize education, tourism, logistics, and governance.</p>
+              </div>
+              <div class="metric-card glass">
+                <div class="metric-val">Foundation[EA]</div>
+                <h4>Strategic Fit</h4>
+                <p>Positioned uniquely at the intersection of local developer talent and enterprise demand.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 9: The Growth Roadmap -->
+        <section class="slide" data-slide="9">
+          <div class="slide-content">
+            <span class="slide-category">GROWTH STRATEGY</span>
+            <h2 class="slide-title">Scaling Our Velocity <span class="text-accent">(10M RWF)</span></h2>
+            
+            <div class="roadmap-grid mt-md">
+              <div class="roadmap-item" data-allocation="35">
+                <div class="roadmap-header">
+                  <span class="roadmap-label">High-Performance Hardware</span>
+                  <span class="roadmap-cost">3.5M RWF</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill progress-fill-35"></div>
+                </div>
+                <p class="roadmap-details">Laptops, server kits, and GPU developer workstations for premium workflows.</p>
+              </div>
+              
+              <div class="roadmap-item" data-allocation="25">
+                <div class="roadmap-header">
+                  <span class="roadmap-label">Studio HQ in Kigali</span>
+                  <span class="roadmap-cost">2.5M RWF</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill progress-fill-25"></div>
+                </div>
+                <p class="roadmap-details">Co-working incubation facilities, engineering lab room, and meetings room.</p>
+              </div>
+              
+              <div class="roadmap-item" data-allocation="15">
+                <div class="roadmap-header">
+                  <span class="roadmap-label">Cloud Infrastructure & API Tools</span>
+                  <span class="roadmap-cost">1.5M RWF</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill progress-fill-15"></div>
+                </div>
+                <p class="roadmap-details">Dev tooling, hosting infrastructure, APIs, and analytics suite licensing.</p>
+              </div>
+
+              <div class="roadmap-item" data-allocation="10">
+                <div class="roadmap-header">
+                  <span class="roadmap-label">Branding & Portfolio Dev</span>
+                  <span class="roadmap-cost">1.0M RWF</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill progress-fill-10"></div>
+                </div>
+                <p class="roadmap-details">Showcases, portfolio website branding, and professional media content.</p>
+              </div>
+
+              <div class="roadmap-item" data-allocation="15">
+                <div class="roadmap-header">
+                  <span class="roadmap-label">Innovation / R&D Buffer</span>
+                  <span class="roadmap-cost">1.5M RWF</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill progress-fill-15"></div>
+                </div>
+                <p class="roadmap-details">Capital reserved for launching experimental prototypes and products.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 10: Our Impact -->
+        <section class="slide" data-slide="10">
+          <div class="slide-content">
+            <span class="slide-category">LEGACY</span>
+            <h2 class="slide-title">Building a Legacy</h2>
+            <div class="grid-layout cols-3 gap-lg mt-lg">
+              <div class="glass-card hover-glow border-cyan">
+                <div class="impact-num text-cyan">01</div>
+                <h3>Ecosystem Standard</h3>
+                <p>Professionalizing regional software dev practices to meet international execution levels.</p>
+              </div>
+              <div class="glass-card hover-glow border-purple">
+                <div class="impact-num text-purple">02</div>
+                <h3>Student Mentorship</h3>
+                <p>Empowering local students with real project experiences using cutting edge tools.</p>
+              </div>
+              <div class="glass-card hover-glow border-cyan">
+                <div class="impact-num text-cyan">03</div>
+                <h3>Permanent Infrastructure</h3>
+                <p>Creating a self-sustaining innovation hub and hardware workspace directly in Kigali.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 11: Call to Action -->
+        <section class="slide" data-slide="11">
+          <div class="slide-content cta-slide">
+            <div class="cyber-badge">FOUNDATION[EA]</div>
+            <h2 class="kinetic-text font-huge text-glow-cyan">Join Us</h2>
+            <p class="cta-subtitle">Let’s build the digital backbone of East Africa together.</p>
+            
+            <div class="cta-card glass mt-lg">
+              <div class="cta-info-row">
+                <span class="cta-label">Website</span>
+                <span class="cta-value"><a href="https://foundationea.com" target="_blank" rel="noopener noreferrer">foundationea.com</a></span>
+              </div>
+              <div class="cta-divider"></div>
+              <div class="cta-info-row">
+                <span class="cta-label">📧 Email</span>
+                <span class="cta-value"><a href="mailto:agency@mail.foundationea.com">agency@mail.foundationea.com</a></span>
+              </div>
+              <div class="cta-divider"></div>
+              <div class="cta-info-row">
+                <span class="cta-label">💬 WhatsApp</span>
+                <span class="cta-value"><a href="https://wa.me/250783309973?text=Hello%20Foundation[EA]!" target="_blank" rel="noopener noreferrer">+250783309973</a></span>
+              </div>
+              <div class="cta-divider"></div>
+              <div class="cta-info-row">
+                <span class="cta-label">Founder</span>
+                <span class="cta-value">Ashimirwe Joseph Marie</span>
+              </div>
+            </div>
+            
+            <div class="contact-buttons mt-md">
+              <button class="action-btn glow-btn" onclick="window.open('https://wa.me/250783309973?text=Hello%20Foundation[EA]!', '_blank');">
+                💬 Message on WhatsApp
+              </button>
+              <button class="action-btn glow-btn" onclick="window.location.href='mailto:agency@mail.foundationea.com';">
+                📧 Send Email
+              </button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Slide View Bottom Overlay Controls -->
+      <footer id="deck-footer">
+        <div class="footer-left">
+          <!-- Slide Counter -->
+          <span id="slide-index">Slide 1 of 11</span>
+        </div>
+        <div class="footer-center">
+          <!-- Navigation controls -->
+          <button class="nav-control" id="prev-btn" title="Previous Slide (Left Arrow)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          
+          <button class="nav-control" id="play-btn" title="Autoplay Slideshow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="play-icon"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          </button>
+
+          <button class="nav-control" id="next-btn" title="Next Slide (Right Arrow/Space)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+        <div class="footer-right">
+          <!-- Presenter View trigger & Speaker notes overlay toggle -->
+          <button class="action-btn icon-btn" id="notes-toggle-btn" title="Show Speaker Notes (N)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            <span>Speaker Notes</span>
+          </button>
+          <button class="action-btn icon-btn active" id="presenter-toggle-btn" title="Toggle Presenter View (P)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg>
+            <span>Presenter Mode</span>
+          </button>
+          <button class="action-btn icon-btn" id="help-btn" title="Help / Keyboard Shortcuts">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+          </button>
+        </div>
+      </footer>
+
+      <!-- Floating Speaker Notes Overlay for Viewer mode -->
+      <div id="notes-overlay" class="glass hidden">
+        <div class="notes-overlay-header">
+          <h4>Presenter Notes</h4>
+          <button id="notes-collapse-btn" title="Minimize/Expand Notes">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+        </div>
+        <p id="notes-overlay-text">Notes go here...</p>
+      </div>
+
+    </main>
+
+    <!-- PRESENTER DESKTOP SPLIT PANEL (Shows up when presenter-mode is active) -->
+    <aside id="presenter-aside" class="glass">
+      
+      <!-- Presenter Header -->
+      <div class="presenter-header">
+        <h3>Presenter Panel</h3>
+        <div id="presenter-timer">00:00:00</div>
+        <div class="timer-controls">
+          <button id="timer-reset-btn" class="mini-btn">Reset</button>
+        </div>
+      </div>
+
+      <!-- Current notes -->
+      <div class="presenter-section notes-section">
+        <h4>Speaker Notes</h4>
+        <div class="notes-scroll-box">
+          <p id="presenter-notes-content">Speaker notes text loading...</p>
+        </div>
+      </div>
+
+      <!-- Next slide preview -->
+      <div class="presenter-section preview-section">
+        <h4>Next Slide Preview</h4>
+        <div id="next-slide-container">
+          <div id="next-slide-preview-frame">
+            <div class="preview-placeholder">End of Deck</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deck Stats / Controls -->
+      <div class="presenter-section stats-section">
+        <h4>Status Dashboard</h4>
+        <div class="dashboard-grid">
+          <div class="stat-box">
+            <span class="stat-label">Current Slide</span>
+            <span class="stat-val" id="dashboard-slide-num">1 / 10</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Autoplay</span>
+            <span class="stat-val" id="dashboard-autoplay-status">Inactive</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Help & Keyboard Shortcuts Modal -->
+  <div id="help-modal" class="modal-overlay hidden">
+    <div class="modal-content glass">
+      <h3>Keyboard Controls</h3>
+      <ul class="keyboard-list">
+        <li><kbd>→</kbd> or <kbd>Space</kbd> or <kbd>PageDown</kbd> : Next Slide</li>
+        <li><kbd>←</kbd> or <kbd>Backspace</kbd> or <kbd>PageUp</kbd> : Previous Slide</li>
+        <li><kbd>P</kbd> : Toggle Presenter Mode Split</li>
+        <li><kbd>N</kbd> : Toggle On-Screen Speaker Notes</li>
+        <li><kbd>A</kbd> : Toggle Autoplay</li>
+        <li><kbd>Esc</kbd> : Close this Modal</li>
+      </ul>
+      <button class="action-btn mt-md" id="close-modal-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- Script File -->
+  <script src="app.js"></script>
+</body>
+</html>
