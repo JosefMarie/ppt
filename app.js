@@ -302,11 +302,59 @@ document.addEventListener('DOMContentLoaded', () => {
   closeModalBtn.addEventListener('click', toggleHelpModal);
   timerResetBtn.addEventListener('click', resetPresenterTimer);
 
+  // QR Modal controls
+  const qrBtn = document.getElementById('qr-btn');
+  const qrModal = document.getElementById('qr-modal');
+  const qrCloseBtn = document.getElementById('qr-close-btn');
+  const qrCopyBtn = document.getElementById('qr-copy-btn');
+  const qrDownloadBtn = document.getElementById('qr-download-btn');
+  const qrLinkEl = document.getElementById('qr-link');
+
+  function openQrModal() {
+    if (qrModal) qrModal.classList.remove('hidden');
+  }
+  function closeQrModal() {
+    if (qrModal) qrModal.classList.add('hidden');
+  }
+
+  if (qrBtn) qrBtn.addEventListener('click', openQrModal);
+  if (qrCloseBtn) qrCloseBtn.addEventListener('click', closeQrModal);
+  if (qrModal) {
+    qrModal.addEventListener('click', (e) => {
+      if (e.target === qrModal) closeQrModal();
+    });
+  }
+
+  if (qrCopyBtn) {
+    qrCopyBtn.addEventListener('click', () => {
+      const url = qrLinkEl?.href || window.location.href;
+      navigator.clipboard.writeText(url).then(() => {
+        alert('Presentation link copied to clipboard');
+      }).catch(() => {
+        alert('Unable to copy link');
+      });
+    });
+  }
+
+  if (qrDownloadBtn) {
+    qrDownloadBtn.addEventListener('click', () => {
+      const img = document.getElementById('qr-img');
+      if (!img) return;
+      const link = document.createElement('a');
+      link.href = img.src;
+      link.download = 'foundationea_presentation_qr.png';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    });
+  }
+
   // Keyboard controls
   window.addEventListener('keydown', (e) => {
     // Avoid interfering when modal is open and Esc is hit
     if (e.key === 'Escape') {
       helpModal.classList.add('hidden');
+      if (qrModal) qrModal.classList.add('hidden');
       return;
     }
     

@@ -35,6 +35,9 @@
           FOUNDATION<span class="text-cyan">[EA]</span>
         </div>
         <div class="tagline">Pitch Deck 2026</div>
+        <button class="nav-control" id="qr-btn" title="Show QR Code" aria-label="Show QR Code">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8"></rect><rect x="13" y="3" width="8" height="8"></rect><rect x="13" y="13" width="8" height="8"></rect></svg>
+        </button>
       </header>
 
       <!-- Slides Container -->
@@ -489,6 +492,20 @@
           </button>
         </div>
       </footer>
+
+  <!-- QR Modal -->
+  <div id="qr-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="QR Code">
+    <div class="modal-content">
+      <h3>Scan to open the presentation</h3>
+      <img id="qr-img" class="qr-image" src="qr_code.png" alt="QR code linking to presentation" />
+      <div class="qr-actions">
+        <button id="qr-copy-btn" class="action-btn">Copy Link</button>
+        <button id="qr-download-btn" class="action-btn">Download QR</button>
+        <button id="qr-close-btn" class="action-btn">Close</button>
+      </div>
+      <p class="qr-note">Or open: <a id="qr-link" href="https://josefmarie.github.io/ppt/" target="_blank" rel="noopener noreferrer">https://josefmarie.github.io/ppt/</a></p>
+    </div>
+  </div>
 
       <!-- Floating Speaker Notes Overlay for Viewer mode -->
       <div id="notes-overlay" class="glass hidden">
