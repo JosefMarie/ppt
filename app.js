@@ -340,12 +340,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Exit Presenter Mode button (mobile): when clicked, ensure presenter mode is turned off
   if (exitPresenterBtn) {
     exitPresenterBtn.addEventListener('click', () => {
+      // Force exit presenter mode (do not rely on toggle state)
       if (appContainer.classList.contains('presenter-layout')) {
-        togglePresenterMode();
-        // Brief confirmation for the presenter
-        setTimeout(() => {
-          // Optionally focus content or give subtle feedback
-        }, 120);
+        appContainer.classList.remove('presenter-layout');
+        appContainer.classList.add('viewer-layout');
+        if (presenterToggleBtn) presenterToggleBtn.classList.remove('active');
+        // Stop timer if running
+        if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
+        // Ensure presenter aside is hidden and viewer updates
+        const currentActiveSlide = document.querySelector('.slide.active');
+        if (currentActiveSlide) currentActiveSlide.classList.add('active');
+        // Hide any presenter-only UI state
       }
     });
   }
